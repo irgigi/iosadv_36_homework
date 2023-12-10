@@ -15,7 +15,7 @@ class PostViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         navBarButton = UIBarButtonItem(
-            title: "Инфо",
+            title: NSLocalizedString("Инфо", comment: "-"),
             style: .plain,
             target: self,
             action: #selector(buttonPressed)

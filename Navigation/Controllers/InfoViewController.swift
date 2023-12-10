@@ -11,7 +11,7 @@ class InfoViewController: UIViewController {
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Open", for: .normal)
+        button.setTitle(NSLocalizedString("Open", comment: "-"), for: .normal)
         return button
        }()
     
@@ -62,7 +62,7 @@ class InfoViewController: UIViewController {
                 case .success(let text):
                     self?.jsonLabel.text = text
                 case .failure(_):
-                    self?.jsonLabel.text = "Ошибка"
+                    self?.jsonLabel.text = NSLocalizedString("Ошибка", comment: "-")
                 }
             }
         }
@@ -71,9 +71,9 @@ class InfoViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let text):
-                    self?.planetLabel.text = "Период обращения планеты Татуин вокруг своей звезды - \(text.orbitalPeriod)"
+                    self?.planetLabel.text = NSLocalizedString("Период обращения планеты Татуин вокруг своей звезды - \(text.orbitalPeriod)", comment: "-")
                 case .failure(_):
-                    self?.planetLabel.text = "Ошибка orbitalPeriod"
+                    self?.planetLabel.text = NSLocalizedString("Ошибка orbitalPeriod", comment: "-")
                 }
             }
         }
@@ -97,9 +97,9 @@ class InfoViewController: UIViewController {
                             }
                         } .resume()
                     }
-                    
+                   
                 case .failure(_):
-                    self?.planetLabel.text = "Ошибка"
+                    self?.planetLabel.text = NSLocalizedString("Ошибка", comment: "-")
                 }
             }
         }

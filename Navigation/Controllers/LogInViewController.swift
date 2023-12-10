@@ -34,7 +34,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let image = UIImageView (
             frame: CGRect()
         )
-        image.image = UIImage(named: "VK")
+        
+        image.image = UIImage(named: NSLocalizedString("VK", comment: "-"))
         
         return image
     }()
@@ -97,7 +98,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let bluePixelImage = UIImage(named: "blue_pixel")
         button.setBackgroundImage(bluePixelImage, for: .normal)
         button.backgroundImage(for: .normal)
-        button.setTitle("Log In", for: .normal)
+        button.setTitle(NSLocalizedString("Log In", comment: "-"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 10.0
@@ -110,7 +111,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let bluePixelImage = UIImage(named: "blue_pixel")
         button.setBackgroundImage(bluePixelImage, for: .normal)
         button.backgroundImage(for: .normal)
-        button.setTitle("Подобрать пароль", for: .normal)
+        button.setTitle(NSLocalizedString("Подобрать пароль", comment: "-"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 10.0

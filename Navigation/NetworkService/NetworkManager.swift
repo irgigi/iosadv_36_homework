@@ -29,7 +29,7 @@ struct NetworkManager {
     //метод запускает URLSessionDataTask для определенного URL
     static func request(for configuration: AppConfiguration) {
         let urlString = String(configuration.urlString)
-        print("urlString -", urlString)
+        //print("urlString -", urlString)
         guard let url = URL(string: urlString) else { return }
         let request = URLRequest(url: url)
         let session = URLSession.shared
@@ -43,7 +43,7 @@ struct NetworkManager {
             if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 200:
-                    print("Успешный запрос")
+                    //print("Успешный запрос")
                     guard let data = data else { return }
                     guard let dataString = String(data: data, encoding: .utf8) else { return }
                     print(dataString)

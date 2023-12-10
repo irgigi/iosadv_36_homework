@@ -58,7 +58,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         
         text.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         text.textColor = UIColor.black
-        text.placeholder = " введите текст "
+        text.placeholder = NSLocalizedString(" введите текст ", comment: "-")
         text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: text.frame.height))
         text.leftViewMode = .always
         text.layer.cornerRadius = 12
@@ -79,7 +79,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
                 height: 0
             )
         )
-        button.setTitle("Set status", for: .normal)
+        button.setTitle(NSLocalizedString("Set status", comment: "-"), for: .normal)
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5

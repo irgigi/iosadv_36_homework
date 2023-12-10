@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .lightGray
-        title = "Profile" 
+        title = NSLocalizedString("Profile", comment: "-")
         initialFetch()
         tableView.addSubview(profileTableHeaderView)
         view.addSubview(tableView)
@@ -104,13 +104,13 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func doubleTapClickAction(_ sender: UITapGestureRecognizer) {
-        let message = "saved"
+        let message = NSLocalizedString("saved", comment: "-")
         if sender.state == .recognized {
             if sender.view is PostTableViewCell {
                 if let indexPathRow = sender.view?.tag {
                     let info = data[indexPathRow]
                     let alertController = UIAlertController(title: info.image, message: message, preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "ok", style: .default)
+                    let okAction = UIAlertAction(title: NSLocalizedString("ok", comment: "-"), style: .default)
                     alertController.addAction(okAction)
                     //получение данных домашка 9
                     if let allObjects = fetchRezultController.fetchedObjects {

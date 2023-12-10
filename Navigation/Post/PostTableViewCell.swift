@@ -43,7 +43,7 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.text = "Views: "
+        label.text = NSLocalizedString("Views: ", comment: "-")
         return label
     }()
     
@@ -51,7 +51,7 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.text = "Likes: "
+        label.text = NSLocalizedString("Likes: ", comment: "-")
         return label
     }()
     

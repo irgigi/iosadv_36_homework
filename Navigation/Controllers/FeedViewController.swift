@@ -12,8 +12,8 @@ struct Post {
 
 
 class FeedViewController: UIViewController {
-    
-    var post = Post(title: "Мой пост")
+    //NSLocalizedString(, comment: "-")
+    var post = Post(title: NSLocalizedString("Мой пост", comment: "-"))
 
     
     override func viewDidLoad() {

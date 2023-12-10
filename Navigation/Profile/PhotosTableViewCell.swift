@@ -97,7 +97,7 @@ extension PhotosTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
                 fatalError("error collection cell")
             }
             //cell.setupImage(data[indexPath.row])
-            cell.textLabel.text = "Photos"
+            cell.textLabel.text = NSLocalizedString("Photos", comment: "-")
             cell.arrowButton.setImage(UIImage(systemName: "arrow.forward"), for: .normal)
             return cell
         }

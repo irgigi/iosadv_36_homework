@@ -63,7 +63,7 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Photo Gallery"
+        title = NSLocalizedString("Photo Gallery", comment: "-")
         view.backgroundColor = .white
         //загрузка своих фото в массив
         //5 hw
@@ -89,11 +89,11 @@ class PhotosViewController: UIViewController {
             //try networkService.getPhotos(arrayPhotos: photos_error)
         } catch ApiError.notFound {
             print(photos.count)
-            showAlert(title: "Фото не загружены", message: "Попробуйте еще раз")
+            showAlert(title: NSLocalizedString("Фото не загружены", comment: "-"), message: NSLocalizedString("Попробуйте еще раз", comment: "-"))
         } catch ApiError.invalidInput {
-            showAlert(title: "Фото не найдены", message: "Попробуйте еще раз")
+            showAlert(title: NSLocalizedString("Фото не найдены", comment: "-"), message: NSLocalizedString("Попробуйте еще раз", comment: "-"))
         } catch ApiError.networkError {
-            showAlert(title: "Error", message: "Неизвестная ошибка.Попробуйте еще раз")
+            showAlert(title: NSLocalizedString("Error", comment: "-"), message: NSLocalizedString("Неизвестная ошибка.Попробуйте еще раз", comment: "-"))
         }  catch {
             print("default")
         }
@@ -102,7 +102,7 @@ class PhotosViewController: UIViewController {
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "-"), style: .cancel))
         self.present(alert, animated: true)
     }
 
@@ -120,7 +120,7 @@ class PhotosViewController: UIViewController {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
                 guard let self = self else { return }
                 self.counter += 1
-                self.timeLabel.text = "waiting \(self.counter)"
+                self.timeLabel.text = NSLocalizedString("waiting \(self.counter)", comment: "-")
             })
             timer?.tolerance = 0.3
           /*
