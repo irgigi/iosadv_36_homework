@@ -29,6 +29,8 @@
 		86815E2C2A8A457100BCA8C8 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E2B2A8A457100BCA8C8 /* LoginInspector.swift */; };
 		86815E2F2A8A739F00BCA8C8 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */; };
 		86815E312A8A745500BCA8C8 /* MyLogInFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */; };
+		868AC74F2B26EF440061C195 /* Localizable(English).stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 868AC7512B26EF440061C195 /* Localizable(English).stringsdict */; };
+		868AC7522B26EF4C0061C195 /* Localizable(Russian).stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 868AC7542B26EF4C0061C195 /* Localizable(Russian).stringsdict */; };
 		869F01FB2A349217007456E6 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */; };
 		869F01FD2A349500007456E6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FC2A349500007456E6 /* ProfileViewController.swift */; };
 		86A042BE2AC8476E00597C78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A042BD2AC8476E00597C78 /* NetworkService.swift */; };
@@ -73,6 +75,8 @@
 		86815E2B2A8A457100BCA8C8 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogInFactory.swift; sourceTree = "<group>"; };
+		868AC7502B26EF440061C195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = "en.lproj/Localizable(English).stringsdict"; sourceTree = "<group>"; };
+		868AC7532B26EF4C0061C195 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = "ru.lproj/Localizable(Russian).stringsdict"; sourceTree = "<group>"; };
 		869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		869F01FC2A349500007456E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		86A042BD2AC8476E00597C78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		861B23502A2B5E160099CA6D = {
 			isa = PBXGroup;
 			children = (
+				868AC7542B26EF4C0061C195 /* Localizable(Russian).stringsdict */,
+				868AC7512B26EF440061C195 /* Localizable(English).stringsdict */,
 				86E3BDE52B25F31D0067551C /* Localizable.xcstrings */,
 				861B235B2A2B5E160099CA6D /* Navigation */,
 				861B235A2A2B5E160099CA6D /* Products */,
@@ -297,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				861B23692A2B5E180099CA6D /* LaunchScreen.storyboard in Resources */,
+				868AC74F2B26EF440061C195 /* Localizable(English).stringsdict in Resources */,
 				861B23662A2B5E180099CA6D /* Assets.xcassets in Resources */,
+				868AC7522B26EF4C0061C195 /* Localizable(Russian).stringsdict in Resources */,
 				86E3BDE62B25F31D0067551C /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +366,22 @@
 				86E3BDE82B25F4420067551C /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		868AC7512B26EF440061C195 /* Localizable(English).stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				868AC7502B26EF440061C195 /* en */,
+			);
+			name = "Localizable(English).stringsdict";
+			sourceTree = "<group>";
+		};
+		868AC7542B26EF4C0061C195 /* Localizable(Russian).stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				868AC7532B26EF4C0061C195 /* ru */,
+			);
+			name = "Localizable(Russian).stringsdict";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

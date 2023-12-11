@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>numberOfLikes</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@Likes:@</string>
+		<key>Likes:</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>%d Лайков:</string>
+			<key>zero</key>
+			<string>%d Лайков:</string>
+			<key>one</key>
+			<string>%d Лайк:</string>
+			<key>two</key>
+			<string>%d Лайка:</string>
+			<key>three</key>
+			<string>%d Лайка:</string>
+			<key>four</key>
+			<string>%d Лайка:</string>
+			<key>many</key>
+			<string>%d Лайков:</string>
+		</dict>
+	</dict>
+	<key>numberOfViews</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@Views:@</string>
+		<key>Views:</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>%d Просмотров:</string>
+			<key>one</key>
+			<string>%d Просмотр:</string>
+			<key>two</key>
+			<string>%d Просмотра:</string>
+			<key>three</key>
+			<string>%d Просмотра:</string>
+			<key>four</key>
+			<string>%d Просмотра:</string>
+			<key>many</key>
+			<string>%d Просмотров:</string>
+			<key>other</key>
+			<string>%d Просмотров:</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -42,16 +42,16 @@ class PostTableViewCell: UITableViewCell {
     lazy var likesLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.text = NSLocalizedString("Views: ", comment: "-")
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.text = NSLocalizedString("Likes: ", comment: "-")
         return label
     }()
     
     lazy var viewsLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.text = NSLocalizedString("Likes: ", comment: "-")
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.text = NSLocalizedString("Views: ", comment: "-")
         return label
     }()
     
@@ -170,18 +170,22 @@ class PostTableViewCell: UITableViewCell {
             stackForLabels.centerXAnchor.constraint(equalTo: centerXAnchor),
             stackForLabels.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackForLabels.widthAnchor.constraint(equalTo: widthAnchor),
-    
+            
             likesLabel.topAnchor.constraint(equalTo: stackForLabels.topAnchor),
+            likesLabel.trailingAnchor.constraint(equalTo: viewsLabel.leadingAnchor, constant: -100),
             likesLabel.leadingAnchor.constraint(equalTo: stackForLabels.leadingAnchor),
-            likesLabel.leftAnchor.constraint(equalTo: leftAnchor),
+            //likesLabel.leftAnchor.constraint(equalTo: leftAnchor),
             likesLabel.bottomAnchor.constraint(equalTo: stackForLabels.bottomAnchor),
-            likesLabel.widthAnchor.constraint(equalToConstant: 50),
-        
+            
             viewsLabel.topAnchor.constraint(equalTo: stackForLabels.topAnchor),
-            viewsLabel.trailingAnchor.constraint(equalTo: stackForLabels.trailingAnchor),
-            viewsLabel.rightAnchor.constraint(equalTo: rightAnchor),
+            viewsLabel.trailingAnchor.constraint(equalTo: stackForLabels.trailingAnchor, constant: 10),
+            //viewsLabel.rightAnchor.constraint(equalTo: rightAnchor),
             viewsLabel.bottomAnchor.constraint(equalTo: stackForLabels.bottomAnchor),
-            viewsLabel.widthAnchor.constraint(equalToConstant: 50)
+            viewsLabel.widthAnchor.constraint(equalToConstant: 250),
+    
+
+        
+
       
         ])
         

@@ -18,6 +18,28 @@
         }
       }
     },
+    "Alex" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Алекс"
+          }
+        }
+      }
+    },
+    "Ben" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бен"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "comment" : "-",
       "localizations" : {
@@ -46,6 +68,17 @@
         }
       }
     },
+    "Den" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ден"
+          }
+        }
+      }
+    },
     "Error" : {
       "comment" : "-",
       "localizations" : {
@@ -59,6 +92,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ошибка"
+          }
+        }
+      }
+    },
+    "John" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Джон"
+          }
+        }
+      }
+    },
+    "Kass" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Касс"
           }
         }
       }
@@ -104,6 +159,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "логин"
+          }
+        }
+      }
+    },
+    "Me and my favorite food" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я и моя любимая еда"
+          }
+        }
+      }
+    },
+    "Me in 2 mounth" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я в 2 месяца"
+          }
+        }
+      }
+    },
+    "Me in 12 years old" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я в 12 лет"
+          }
+        }
+      }
+    },
+    "My love" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Моя любовь"
+          }
+        }
+      }
+    },
+    "My paws" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мои лапки"
+          }
+        }
+      }
+    },
+    "My rest on the computer desk" : {
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой отдых на компьютерном столе"
           }
         }
       }
