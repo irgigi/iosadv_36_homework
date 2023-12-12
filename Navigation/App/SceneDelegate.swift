@@ -8,11 +8,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    static let language = NSLocalizedString("language", comment: "-")
+    
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        print(NSLocalizedString("language", comment: "-"))
+        //print("---", language)
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
@@ -32,11 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
        // let infoNavController = UINavigationController(rootViewController: InfoViewController())
         
-        firstNavController.tabBarItem = UITabBarItem(title: "Лента пользователя", image: UIImage(systemName: "heart") , tag: 0)
+        firstNavController.tabBarItem = UITabBarItem(title: NSLocalizedString("Лента пользователя", comment: "-"), image: UIImage(systemName: "heart") , tag: 0)
         
-        secondNavController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "house"), tag: 2)
+        secondNavController.tabBarItem = UITabBarItem(title: NSLocalizedString("Профиль", comment: "-"), image: UIImage(systemName: "house"), tag: 2)
         
-        likeController.tabBarItem = UITabBarItem(title: "Избранное", image: UIImage(systemName: "hand.thumbsup"), tag: 1)
+        likeController.tabBarItem = UITabBarItem(title: NSLocalizedString("Избранное", comment: "-"), image: UIImage(systemName: "hand.thumbsup"), tag: 1)
         
         postNavController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 3)
         

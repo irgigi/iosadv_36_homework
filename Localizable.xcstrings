@@ -18,24 +18,14 @@
         }
       }
     },
-    "Alex" : {
+    "(views) Views" : {
       "comment" : "-",
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Алекс"
-          }
-        }
-      }
-    },
-    "Ben" : {
-      "comment" : "-",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Бен"
+            "value" : "Просмотры"
           }
         }
       }
@@ -68,17 +58,6 @@
         }
       }
     },
-    "Den" : {
-      "comment" : "-",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ден"
-          }
-        }
-      }
-    },
     "Error" : {
       "comment" : "-",
       "localizations" : {
@@ -96,35 +75,13 @@
         }
       }
     },
-    "John" : {
-      "comment" : "-",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Джон"
-          }
-        }
-      }
-    },
-    "Kass" : {
-      "comment" : "-",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Касс"
-          }
-        }
-      }
-    },
     "language" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "language"
+            "value" : "english"
           }
         },
         "ru" : {
@@ -135,13 +92,20 @@
         }
       }
     },
-    "Likes: " : {
+    "Likes" : {
       "comment" : "-",
+      "extractionState" : "stale",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Likes"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Лайки:"
+            "value" : "Лайки"
           }
         }
       }
@@ -342,13 +306,20 @@
         }
       }
     },
-    "Views: " : {
+    "Views" : {
       "comment" : "-",
+      "extractionState" : "stale",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Views"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Просмотры:"
+            "value" : "Просмотры"
           }
         }
       }
@@ -387,6 +358,23 @@
         }
       }
     },
+    "Избранное" : {
+      "comment" : "-",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное"
+          }
+        }
+      }
+    },
     "Инфо" : {
       "comment" : "-",
       "localizations" : {
@@ -400,6 +388,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Инфо"
+          }
+        }
+      }
+    },
+    "Лента пользователя" : {
+      "comment" : "-",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "user feed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лента пользователя"
           }
         }
       }
@@ -519,6 +524,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Попробуйте еще раз"
+          }
+        }
+      }
+    },
+    "Профиль" : {
+      "comment" : "-",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
           }
         }
       }

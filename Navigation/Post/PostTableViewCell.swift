@@ -43,7 +43,6 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.text = NSLocalizedString("Likes: ", comment: "-")
         return label
     }()
     
@@ -51,7 +50,6 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.text = NSLocalizedString("Views: ", comment: "-")
         return label
     }()
     
@@ -126,9 +124,26 @@ class PostTableViewCell: UITableViewCell {
         autorLabel.text = model.author
         imagePost.image = UIImage(named: model.image)
         descriptionLabel.text = model.description
-        likesLabel.text! += String(describing: model.likes)
-        viewsLabel.text! += String(describing: model.views)
         
+        //множественные формы, реализация
+        let likes = model.likes
+        let views = model.views
+        
+        var tableName = ""
+        
+        if SceneDelegate.language == "english" {
+            tableName = "Plurals(English)"
+        } else if SceneDelegate.language == "русский" {
+            tableName = "Plurals(Russian)"
+        }
+        
+        let localizedViews = NSLocalizedString("Views", tableName: tableName, comment: "-")
+        let localizedLikes = NSLocalizedString("Likes", tableName: tableName, comment: "-")
+        
+        let formattedViews = String(format: localizedViews, views)
+        let formattedLikes = String(format: localizedLikes, likes)
+        likesLabel.text = formattedLikes
+        viewsLabel.text = formattedViews
         }
     
 

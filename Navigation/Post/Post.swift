@@ -18,23 +18,23 @@ struct PostModel {
 extension PostModel {
     static func make() -> [PostModel] {
         [  //NSLocalizedString(, comment: "-")
-            PostModel(author: NSLocalizedString("Alex", comment: "-"),
+            PostModel(author: "Alex",
                       description: NSLocalizedString("Me in 2 mounth", comment: "-"),
                       image: "felix1",
-                      likes: 50,
-                      views: 178),
+                      likes: 1,
+                      views: 1),
             
-            PostModel(author: NSLocalizedString("Ben", comment: "-"),
+            PostModel(author: "Ben",
                       description: NSLocalizedString("Me in 12 years old", comment: "-"),
                       image: "felix2",
                       likes: 105,
                       views: 1008),
             
-            PostModel(author: NSLocalizedString("John", comment: "-"),
+            PostModel(author: "John",
                       description: NSLocalizedString("Me and my favorite food", comment: "-"),
                       image: "felix3",
                       likes: 86,
-                      views: 1356),
+                      views: 156),
             
             PostModel(author: "Alex",
                       description: NSLocalizedString("My rest on the computer desk", comment: "-"),
@@ -45,16 +45,16 @@ extension PostModel {
             PostModel(author: "Ben",
                       description: NSLocalizedString("My paws", comment: "-"),
                       image: "felix5",
-                      likes: 67,
-                      views: 1678),
+                      likes: 2,
+                      views: 3),
             
-            PostModel(author: NSLocalizedString("Kass", comment: "-"),
+            PostModel(author: "Kass",
                       description: NSLocalizedString("My love", comment: "-"),
                       image: "felix6",
                       likes: 100,
-                      views: 1452),
+                      views: 452),
             
-            PostModel(author: NSLocalizedString("Den", comment: "-"),
+            PostModel(author: "Den",
                       description: NSLocalizedString("My love", comment: "-"),
                       image: "felix7",
                       likes: 76,
