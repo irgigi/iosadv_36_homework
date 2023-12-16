@@ -39,12 +39,17 @@ class PhotosTableViewCell: UITableViewCell {
         contentView.addSubview(collectionView)
         //collectionView.addSubview(imageCollection)
         constraint()
+
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        Theme.current = .dark
+    }
     
     func constraint() {
         NSLayoutConstraint.activate([

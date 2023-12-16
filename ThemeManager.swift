@@ -120,6 +120,11 @@ extension UIView: Themable {
             (self as! UITableViewHeaderFooterView).backgroundColor = theme.palette.viewColor
             return
         }
+        
+        if (self is UIScrollView) {
+            (self as! UIScrollView).backgroundColor = theme.palette.viewColor
+            return
+        }
      
         backgroundColor = theme.palette.viewColor
     }

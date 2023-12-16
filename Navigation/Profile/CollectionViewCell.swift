@@ -30,6 +30,7 @@ class CollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func setupImage(_ model: PostModel) {
         
         imageCollection.image = UIImage(named: model.image)

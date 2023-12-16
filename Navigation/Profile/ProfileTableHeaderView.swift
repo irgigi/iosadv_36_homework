@@ -99,7 +99,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         
         addSubviews()
         elementConstraint()
-        
+        setNeedsDisplay()
     
     }
 

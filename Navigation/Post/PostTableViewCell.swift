@@ -81,7 +81,8 @@ class PostTableViewCell: UITableViewCell {
         addSubviewInCell()
         
         consraintInCell()
-
+        
+        
 
       //  tuneView()
     }
@@ -90,6 +91,7 @@ class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -97,6 +99,8 @@ class PostTableViewCell: UITableViewCell {
         isSelected = false
         isHighlighted = false
     }
+    
+
     
  
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -116,7 +120,7 @@ class PostTableViewCell: UITableViewCell {
         for subview in subviews {
             addSubview(subview)
         }
-        
+
     }
 
     func update(_ model: PostModel) {
@@ -144,6 +148,8 @@ class PostTableViewCell: UITableViewCell {
         let formattedLikes = String(format: localizedLikes, likes)
         likesLabel.text = formattedLikes
         viewsLabel.text = formattedViews
+        
+        
         }
     
 
