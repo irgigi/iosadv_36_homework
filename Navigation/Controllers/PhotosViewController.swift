@@ -61,10 +61,15 @@ class PhotosViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        Theme.current = .dark
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Photo Gallery", comment: "-")
-        view.backgroundColor = .white
+        Theme.current = .dark
+        //view.backgroundColor = .white
         //загрузка своих фото в массив
         //5 hw
         

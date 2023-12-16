@@ -326,6 +326,7 @@
     },
     "VK" : {
       "comment" : "-",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

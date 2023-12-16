@@ -34,9 +34,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let image = UIImageView (
             frame: CGRect()
         )
-        
-        image.image = UIImage(named: NSLocalizedString("VK", comment: "-"))
-        
+        image.image = UIImage(named: "VK")
         return image
     }()
     
@@ -44,12 +42,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     lazy var loginField: UITextField = {
         let text = UITextField()
         
-        text.backgroundColor = .systemGray6
+        //text.backgroundColor = .systemGray6
         text.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         //text.placeholder = "login"
         text.text = "felix04"
-        text.textColor = UIColor.black
-        text.tintColor = UIColor(named: "MyColor")
+        //text.textColor = UIColor.black
+        //text.tintColor = UIColor(named: "MyColor")
         text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: text.frame.height))
         text.leftViewMode = .always
         text.autocapitalizationType = .none
@@ -68,13 +66,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     lazy var passwordField: UITextField = {
         let text = UITextField()
-        
-        text.backgroundColor = .systemGray6
+        //text.backgroundColor = .systemGray6
         text.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         //text.placeholder = "password"
         text.text = "1507"
-        text.textColor = UIColor.black
-        text.tintColor = UIColor(named: "MyColor")
+        //text.textColor = UIColor.black
+        //text.tintColor = UIColor(named: "MyColor")
         text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: text.frame.height))
         text.leftViewMode = .always
         text.autocapitalizationType = .none
@@ -165,12 +162,24 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    //MARK: -LIFE CYCLE-
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        Theme.current = .dark
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
         
-    
+        Theme.current = .dark
+        
         view.addSubview(vkView)
         view.addSubview(scrollFieldView)
         view.addSubview(activityIndicator)
@@ -186,10 +195,27 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.loginField.delegate = self
         self.passwordField.delegate = self
         
-        
-
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupKeyboardObservers()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeKeyboardObservers()
+        
+    }
+    
+    //MARK: -OTHER METHODS-
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextField = view.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
@@ -209,22 +235,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     */
     override func touchesBegan(_ textField: Set<UITouch>, with event: UIEvent?) {
         self.scrollFieldView.endEditing(true)
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        setupKeyboardObservers()
- 
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        removeKeyboardObservers()
-        
     }
     
     

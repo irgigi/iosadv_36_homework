@@ -71,22 +71,32 @@ class ProfileViewController: UIViewController {
     private func initialFetch() {
         try? fetchRezultController.performFetch()
     }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .lightGray
+        //view.backgroundColor = .lightGray
+        
         title = NSLocalizedString("Profile", comment: "-")
         initialFetch()
         tableView.addSubview(profileTableHeaderView)
         view.addSubview(tableView)
         setupConstraints()
+        
+        viewWillLayoutSubviews()
+        viewDidLayoutSubviews()
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        Theme.current = .dark
     }
     
     init(likeService: LikeService) {
         self.likeService = likeService
         super .init(nibName: nil, bundle: nil)
+        tableView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -95,6 +105,8 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        Theme.current = .dark
+        tableView.reloadData()
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -169,7 +181,6 @@ extension UITableView {
         NSLayoutConstraint.activate([
             headerView.widthAnchor.constraint(equalTo: widthAnchor)
         ])
-        
         headerView.setNeedsLayout()
         headerView.layoutIfNeeded()
         headerView.frame.size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)

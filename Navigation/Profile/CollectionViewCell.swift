@@ -10,7 +10,7 @@ class CollectionViewCell: UICollectionViewCell {
     let imageCollection: UIImageView = {
         let image = UIImageView(frame: .zero)
         let screenWidth = UIScreen.main.bounds.width
-        image.backgroundColor = .black
+        //image.backgroundColor = .black
         image.clipsToBounds = true
         image.layer.cornerRadius = 6.0
         image.contentMode = .scaleAspectFill

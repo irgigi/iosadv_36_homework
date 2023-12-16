@@ -10,7 +10,7 @@ class ElementsCollectionViewCell: UICollectionViewCell {
     let textLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .black
+        //label.textColor = .black
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -19,7 +19,7 @@ class ElementsCollectionViewCell: UICollectionViewCell {
     
     lazy var arrowButton: UIButton = {
         let button = UIButton(type: .system)
-        button.tintColor = .black
+        //button.tintColor = .black
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return(button)

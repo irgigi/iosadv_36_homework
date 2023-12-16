@@ -13,7 +13,7 @@ class PostTableViewCell: UITableViewCell {
     
     lazy var autorLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        //label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 2
         return label
@@ -22,7 +22,7 @@ class PostTableViewCell: UITableViewCell {
     lazy var imagePost: UIImageView = {
         let image = UIImageView()
         let screenWidth = UIScreen.main.bounds.width
-        image.backgroundColor = .black
+        //image.backgroundColor = .black
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFill
       /*
@@ -34,21 +34,21 @@ class PostTableViewCell: UITableViewCell {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .systemGray
+        //label.textColor = .systemGray
         label.numberOfLines = 0
         return label
     }()
     
     lazy var likesLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        //label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return label
     }()
     
     lazy var viewsLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        //label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return label
     }()

@@ -31,6 +31,7 @@
 		86815E2C2A8A457100BCA8C8 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E2B2A8A457100BCA8C8 /* LoginInspector.swift */; };
 		86815E2F2A8A739F00BCA8C8 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */; };
 		86815E312A8A745500BCA8C8 /* MyLogInFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */; };
+		868578DD2B29958A00D89CA4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868578DC2B29958A00D89CA4 /* ThemeManager.swift */; };
 		869F01FB2A349217007456E6 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */; };
 		869F01FD2A349500007456E6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FC2A349500007456E6 /* ProfileViewController.swift */; };
 		86A042BE2AC8476E00597C78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A042BD2AC8476E00597C78 /* NetworkService.swift */; };
@@ -77,6 +78,7 @@
 		86815E2B2A8A457100BCA8C8 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogInFactory.swift; sourceTree = "<group>"; };
+		868578DC2B29958A00D89CA4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		869F01FC2A349500007456E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		86A042BD2AC8476E00597C78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				865B3C5D2B28368E006A663F /* Plurals(Russian).stringsdict */,
 				865B3C622B283698006A663F /* Plurals(English).stringsdict */,
 				86E3BDE52B25F31D0067551C /* Localizable.xcstrings */,
+				868578DC2B29958A00D89CA4 /* ThemeManager.swift */,
 				861B235B2A2B5E160099CA6D /* Navigation */,
 				861B235A2A2B5E160099CA6D /* Products */,
 			);
@@ -340,6 +343,7 @@
 				865FE46B2A90E974009614BB /* PhotosCollectionViewCell.swift in Sources */,
 				86D533582AD98BD400814C56 /* JSONBD.swift in Sources */,
 				86815E312A8A745500BCA8C8 /* MyLogInFactory.swift in Sources */,
+				868578DD2B29958A00D89CA4 /* ThemeManager.swift in Sources */,
 				86B11ECA2A8BD614000D994E /* PhotosTableViewCell.swift in Sources */,
 				86AC75152AF9DBAD00A61A33 /* LikePostController.swift in Sources */,
 				865720172A3B252300F6B3F6 /* FeedViewController.swift in Sources */,
@@ -516,9 +520,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,9 +548,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

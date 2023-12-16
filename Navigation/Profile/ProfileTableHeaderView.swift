@@ -35,7 +35,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         var user: User?
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        label.textColor = .black
+        //label.textColor = .black
         label.text = userProfile?.name
         label.numberOfLines = 0
         
@@ -47,7 +47,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         var user: User?
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = UIColor.gray
+        //label.textColor = UIColor.gray
         label.text = userProfile?.status
         
         return label
@@ -81,7 +81,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         )
         button.setTitle(NSLocalizedString("Set status", comment: "-"), for: .normal)
         button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
+        //button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.7
@@ -90,15 +90,16 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
     
         return(button)
     }()
+    
 
     override init(reuseIdentifier: String?) {
         
         statusText = ""
         super.init(reuseIdentifier: reuseIdentifier)
-       
         
         addSubviews()
         elementConstraint()
+        
     
     }
 

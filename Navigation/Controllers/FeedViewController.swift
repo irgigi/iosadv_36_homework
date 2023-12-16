@@ -12,14 +12,14 @@ struct Post {
 
 
 class FeedViewController: UIViewController {
-    //NSLocalizedString(, comment: "-")
+    
     var post = Post(title: NSLocalizedString("Мой пост", comment: "-"))
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        view.backgroundColor = .systemCyan
+        Theme.current = .dark
             
         let button = UIButton(type: .system)
         button.setTitle(post.title, for: .normal)
