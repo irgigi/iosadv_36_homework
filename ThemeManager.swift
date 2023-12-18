@@ -54,6 +54,7 @@ extension UIView: Themable {
     func applyTheme(_ theme: Theme) {
         if (self is UILabel) {
             (self as! UILabel).textColor = theme.palette.labelColor
+            (self as! UILabel).backgroundColor = .clear
             return
         }
         
@@ -125,6 +126,7 @@ extension UIView: Themable {
             (self as! UIScrollView).backgroundColor = theme.palette.viewColor
             return
         }
+        
      
         backgroundColor = theme.palette.viewColor
     }

@@ -115,11 +115,17 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func addSubviewInCell() {
+        contentView.addSubview(autorLabel)
+        contentView.addSubview(imagePost)
+        contentView.addSubview(stackForLabels)
+        contentView.addSubview(descriptionLabel)
         
+        /*
         let subviews = [autorLabel, imagePost, stackForLabels, descriptionLabel]
         for subview in subviews {
             addSubview(subview)
         }
+         */
 
     }
 
@@ -165,32 +171,32 @@ class PostTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             
-            autorLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            autorLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             autorLabel.bottomAnchor.constraint(equalTo: imagePost.topAnchor, constant: 12),
-            autorLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            autorLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            autorLabel.widthAnchor.constraint(equalTo: widthAnchor),
+            autorLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            autorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            autorLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             autorLabel.heightAnchor.constraint(equalToConstant: 50),
             
             imagePost.topAnchor.constraint(equalTo: autorLabel.bottomAnchor),
             imagePost.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor),
-            imagePost.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imagePost.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imagePost.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imagePost.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imagePost.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            imagePost.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imagePost.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             imagePost.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             
             descriptionLabel.topAnchor.constraint(equalTo: imagePost.bottomAnchor, constant: -16),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             descriptionLabel.bottomAnchor.constraint(equalTo: stackForLabels.topAnchor),
             
             stackForLabels.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: -16),
-            stackForLabels.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            stackForLabels.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            stackForLabels.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackForLabels.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackForLabels.widthAnchor.constraint(equalTo: widthAnchor),
+            stackForLabels.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            stackForLabels.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            stackForLabels.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackForLabels.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            stackForLabels.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             likesLabel.topAnchor.constraint(equalTo: stackForLabels.topAnchor),
             likesLabel.trailingAnchor.constraint(equalTo: viewsLabel.leadingAnchor, constant: -100),
