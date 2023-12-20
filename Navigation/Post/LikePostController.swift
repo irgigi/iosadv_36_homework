@@ -47,7 +47,7 @@ final class LikePostController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialFetch()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .backgroundColorView
         title = "Избранное"
         layout()
 

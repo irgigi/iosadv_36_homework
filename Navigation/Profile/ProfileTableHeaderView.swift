@@ -99,7 +99,14 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         
         addSubviews()
         elementConstraint()
-        setNeedsDisplay()
+        //setNeedsDisplay()
+        if traitCollection.userInterfaceStyle == .dark {
+            overrideUserInterfaceStyle = .dark
+            Theme.current = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+            Theme.current = .light
+        }
     
     }
 

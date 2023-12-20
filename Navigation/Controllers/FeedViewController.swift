@@ -18,10 +18,23 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        Theme.current = .dark
-            
+        if traitCollection.userInterfaceStyle == .dark {
+            overrideUserInterfaceStyle = .dark
+            view.backgroundColor = .backgroundColorView
+        } else {
+            overrideUserInterfaceStyle = .light
+            view.backgroundColor = .backgroundColorView
+        }
+        
         let button = UIButton(type: .system)
+        if traitCollection.userInterfaceStyle == .dark {
+            overrideUserInterfaceStyle = .dark
+            button.setTitleColor(.lightGray, for: .normal)
+        } else {
+            overrideUserInterfaceStyle = .light
+            button.setTitleColor(.darkGray, for: .normal)
+        }
+        
         button.setTitle(post.title, for: .normal)
         button.addTarget(self, action: #selector(goToPosrtViewController), for: .touchUpInside)
         button.frame = CGRect(x: 100, y: 100, width: 200, height: 50)

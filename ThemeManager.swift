@@ -39,11 +39,11 @@ struct ColorPalette {
     let labelColor: UIColor
     let viewColor: UIColor
     let backgroundColor: UIColor
-    let textFieldColor: UIColor
+    let textBackColor: UIColor
     let barTintColor: UIColor
     
-    static let colorLight = ColorPalette(labelColor: .black, viewColor: .white, backgroundColor: .white, textFieldColor: .black, barTintColor: .white)
-    static let colorDark = ColorPalette(labelColor: .white, viewColor: .darkGray, backgroundColor: .black, textFieldColor: .white, barTintColor: .white)
+    static let colorLight = ColorPalette(labelColor: .black, viewColor: .white, backgroundColor: .white, textBackColor: .darkGray, barTintColor: .white)
+    static let colorDark = ColorPalette(labelColor: .white, viewColor: .darkGray, backgroundColor: .lightGray, textBackColor: .white, barTintColor: .gray)
 }
 
 protocol Themable {
@@ -52,12 +52,13 @@ protocol Themable {
 
 extension UIView: Themable {
     func applyTheme(_ theme: Theme) {
+        /*
         if (self is UILabel) {
             (self as! UILabel).textColor = theme.palette.labelColor
             (self as! UILabel).backgroundColor = .clear
             return
         }
-        
+        */
         if (self is UIStackView) {
             (self as! UIStackView).backgroundColor = theme.palette.backgroundColor
             return
@@ -65,20 +66,21 @@ extension UIView: Themable {
         
         
         if (self is UIImageView) {
-            (self as! UIImageView).backgroundColor = theme.palette.viewColor
+            (self as! UIImageView).backgroundColor = .clear
             
             return
         }
          
-        
+        /*
         if (self is UIButton) {
             (self as! UIButton).tintColor = theme.palette.labelColor
+            
             return
         }
-        
+        */
         if (self is UITextField) {
-            (self as! UITextField).textColor = theme.palette.textFieldColor
-            
+            (self as! UITextField).textColor = theme.palette.barTintColor
+            (self as! UITextField).backgroundColor = theme.palette.backgroundColor
             return
         }
         
@@ -86,17 +88,17 @@ extension UIView: Themable {
             (self as! UIStackView).backgroundColor = theme.palette.viewColor
             return
         }
-        
+        /*
         if (self is UINavigationBar) {
-            (self as! UINavigationBar).barTintColor = theme.palette.barTintColor
+            (self as! UINavigationBar).tintColor = theme.palette.barTintColor
             return
         }
         
         if (self is UITabBar) {
-            (self as! UITabBar).barTintColor = theme.palette.barTintColor
+            (self as! UITabBar).tintColor = theme.palette.barTintColor
             return
         }
-        
+        */
         if (self is UITableView) {
             (self as! UITableView).backgroundColor = theme.palette.viewColor
             return
@@ -116,11 +118,12 @@ extension UIView: Themable {
             (self as! UICollectionViewCell).backgroundColor = theme.palette.viewColor
             return
         }
-        
+        /*
         if (self is UITableViewHeaderFooterView) {
             (self as! UITableViewHeaderFooterView).backgroundColor = theme.palette.viewColor
             return
         }
+         */
         
         if (self is UIScrollView) {
             (self as! UIScrollView).backgroundColor = theme.palette.viewColor
@@ -128,7 +131,7 @@ extension UIView: Themable {
         }
         
      
-        backgroundColor = theme.palette.viewColor
+        //backgroundColor = theme.palette.viewColor
     }
 }
 
@@ -139,4 +142,7 @@ extension UIColor {
             return traitCollection.userInterfaceStyle == .light ? lightMode: darkMode
         }
     }
+    
+    static var backgroundColorView = UIColor(named: "AccentColor")
+    
 }

@@ -3,7 +3,7 @@
     {
       "color" : {
         "platform" : "ios",
-        "reference" : "opaqueSeparatorColor"
+        "reference" : "tintColor"
       },
       "idiom" : "universal"
     },
@@ -16,7 +16,7 @@
       ],
       "color" : {
         "platform" : "ios",
-        "reference" : "systemGray4Color"
+        "reference" : "tintColor"
       },
       "idiom" : "universal"
     }

@@ -175,11 +175,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //view.backgroundColor = .white
-        
-        Theme.current = .dark
-        
+        view.backgroundColor = .backgroundColorView
         view.addSubview(vkView)
         view.addSubview(scrollFieldView)
         view.addSubview(activityIndicator)

@@ -48,7 +48,7 @@ class PhotosTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        Theme.current = .dark
+
     }
     
     func constraint() {

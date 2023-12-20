@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene) //экземпляр класса window
        
         let tabBarController = UITabBarController()
+
         
         let firstNavController = UINavigationController(rootViewController: FeedViewController()) //
 
@@ -32,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
        // let infoNavController = UINavigationController(rootViewController: InfoViewController())
         
+        
         firstNavController.tabBarItem = UITabBarItem(title: NSLocalizedString("Лента пользователя", comment: "-"), image: UIImage(systemName: "heart") , tag: 0)
         
         secondNavController.tabBarItem = UITabBarItem(title: NSLocalizedString("Профиль", comment: "-"), image: UIImage(systemName: "house"), tag: 2)
@@ -42,6 +44,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         tabBarController.viewControllers = [firstNavController, likeController, secondNavController]
         
+        
+
         //new 1
         let loginViewController = LogInViewController()
         var loginInspector = LoginInspector()

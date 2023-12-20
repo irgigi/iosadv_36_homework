@@ -75,13 +75,11 @@ class PostTableViewCell: UITableViewCell {
             reuseIdentifier: reuseIdentifier
         )
         
-        stackForLabels.addArrangedSubview(likesLabel)
-        stackForLabels.addArrangedSubview(viewsLabel)
+
      
         addSubviewInCell()
         
         consraintInCell()
-        
         
 
       //  tuneView()
@@ -119,6 +117,8 @@ class PostTableViewCell: UITableViewCell {
         contentView.addSubview(imagePost)
         contentView.addSubview(stackForLabels)
         contentView.addSubview(descriptionLabel)
+        stackForLabels.addArrangedSubview(likesLabel)
+        stackForLabels.addArrangedSubview(viewsLabel)
         
         /*
         let subviews = [autorLabel, imagePost, stackForLabels, descriptionLabel]

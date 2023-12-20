@@ -71,27 +71,35 @@ class ProfileViewController: UIViewController {
     private func initialFetch() {
         try? fetchRezultController.performFetch()
     }
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //view.backgroundColor = .lightGray
-        Theme.current = .dark
+        if traitCollection.userInterfaceStyle == .dark {
+            overrideUserInterfaceStyle = .dark
+            view.backgroundColor = .backgroundColorView
+            Theme.current = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+            view.backgroundColor = .backgroundColorView
+            Theme.current = .light
+        }
+
+        
         title = NSLocalizedString("Profile", comment: "-")
         initialFetch()
         tableView.addSubview(profileTableHeaderView)
         view.addSubview(tableView)
         setupConstraints()
-        
-
     }
     
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        viewWillLayoutSubviews()
-        viewDidLayoutSubviews()
+        //viewWillLayoutSubviews()
+        //viewDidLayoutSubviews()
         tableView.setNeedsDisplay()
         tableView.reloadData()
     }
@@ -101,15 +109,16 @@ class ProfileViewController: UIViewController {
     init(likeService: LikeService) {
         self.likeService = likeService
         super .init(nibName: nil, bundle: nil)
+
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateViewConstraints()
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

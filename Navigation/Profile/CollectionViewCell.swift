@@ -24,6 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubview(imageCollection)
         constraint()
+        
     }
     
     required init?(coder: NSCoder) {
