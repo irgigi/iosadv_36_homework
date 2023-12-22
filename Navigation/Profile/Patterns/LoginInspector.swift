@@ -5,9 +5,16 @@
 import UIKit
 
 struct LoginInspector: LoginViewControllerDelegate {
-    func check(_ login: String?, _ password: String?) -> Bool {
-        let checker = Checker.shared
-        return checker.check(login, password)
+    
+    private let checker: LoginViewControllerDelegate //=
+    
+    init(checker: LoginViewControllerDelegate = Checker.shared) {
+        self.checker = checker
+    }
+    
+    func check(_ login: String?, _ password: String?, completion: @escaping (Result<Bool, Error>) -> Void) {
+        //let checker = Checker.shared
+        checker.check(login, password, completion: completion)
     }
     
     

@@ -14,7 +14,7 @@ struct Post {
 class FeedViewController: UIViewController {
     
     var post = Post(title: NSLocalizedString("Мой пост", comment: "-"))
-
+    public var pushViewControllerWasCalled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,7 @@ class FeedViewController: UIViewController {
     @objc func goToPosrtViewController() {
         let postViewController = PostViewController()
         navigationController?.pushViewController(postViewController, animated: true)
+        pushViewControllerWasCalled = true
     }
         
         

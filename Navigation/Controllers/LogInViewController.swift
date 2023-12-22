@@ -265,7 +265,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return "no login"
     }
     
-    @objc private func buttonToProfile() {
+    @objc func buttonToProfile() {
        
         let profileViewController = ProfileViewController(likeService: likeService)
         let logInspector = LoginInspector()
@@ -294,8 +294,28 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
               }
 #endif
  */
-        let loginResult = logInspector.check(login, password)
+        //let loginResult = logInspector.check(login, password)
         
+        logInspector.check(login, password) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let success):
+                    if success {
+                        let current = CurrentUserService()
+                        ProfileTableHeaderView.userProfile = current.currentUser
+                        self?.navigationController?.pushViewController(profileViewController, animated: true)
+                    } else {
+                        let alert = UIAlertController(title: "Unknown login or password", message: "Please, enter correct user login/password", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                        self?.present(alert, animated: true)
+                    }
+                case .failure(let error):
+                    print("ERROR - ", error.localizedDescription)
+                }
+            }
+
+        }
+        /*
         if loginResult {
             let current = CurrentUserService()
             ProfileTableHeaderView.userProfile = current.currentUser
@@ -305,7 +325,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             self.present(alert, animated: true)
         }
-            
+         */
           
 
       }
