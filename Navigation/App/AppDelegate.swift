@@ -21,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         }
         
+        let localNotificationsService = LocalNotificationsService()
+        Task {
+            if await localNotificationsService.authorizationEnabled() {
+                localNotificationsService.addNotification()
+            }
+        }
+        
+        
         
         
         

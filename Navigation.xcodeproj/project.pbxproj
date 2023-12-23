@@ -32,6 +32,7 @@
 		86815E2F2A8A739F00BCA8C8 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */; };
 		86815E312A8A745500BCA8C8 /* MyLogInFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */; };
 		868578DD2B29958A00D89CA4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868578DC2B29958A00D89CA4 /* ThemeManager.swift */; };
+		8691AA6A2B36A78E0051421D /* LocalNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691AA692B36A78E0051421D /* LocalNotificationsService.swift */; };
 		869F01FB2A349217007456E6 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */; };
 		869F01FD2A349500007456E6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869F01FC2A349500007456E6 /* ProfileViewController.swift */; };
 		86A042BE2AC8476E00597C78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A042BD2AC8476E00597C78 /* NetworkService.swift */; };
@@ -106,6 +107,7 @@
 		86815E2E2A8A739F00BCA8C8 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		86815E302A8A745500BCA8C8 /* MyLogInFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogInFactory.swift; sourceTree = "<group>"; };
 		868578DC2B29958A00D89CA4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		8691AA692B36A78E0051421D /* LocalNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsService.swift; sourceTree = "<group>"; };
 		869F01FA2A349217007456E6 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		869F01FC2A349500007456E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		86A042BD2AC8476E00597C78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -216,10 +218,8 @@
 		861B235B2A2B5E160099CA6D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				86AC75162AF9EEF400A61A33 /* LikeService */,
-				86D6F6AE2AF943BF00435625 /* CoreDataService */,
-				86A042BC2AC8473B00597C78 /* NetworkService */,
 				86815E2D2A8A46C000BCA8C8 /* App */,
+				8691AA682B36A7450051421D /* Services */,
 				8605E1CD2AF8E3DD0063FC6E /* Controllers */,
 				8605E1CC2AF8E3A50063FC6E /* Post */,
 				869F01F92A3491D4007456E6 /* Profile */,
@@ -250,6 +250,17 @@
 				861B23652A2B5E180099CA6D /* Assets.xcassets */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		8691AA682B36A7450051421D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8691AA692B36A78E0051421D /* LocalNotificationsService.swift */,
+				86D6F6AE2AF943BF00435625 /* CoreDataService */,
+				86A042BC2AC8473B00597C78 /* NetworkService */,
+				86AC75162AF9EEF400A61A33 /* LikeService */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		869F01F92A3491D4007456E6 /* Profile */ = {
@@ -492,6 +503,7 @@
 				86815E2C2A8A457100BCA8C8 /* LoginInspector.swift in Sources */,
 				86699E482A8D131B00B69719 /* CollectionViewCell.swift in Sources */,
 				864BA4902A80FBAB00EFAFAA /* TestUserService.swift in Sources */,
+				8691AA6A2B36A78E0051421D /* LocalNotificationsService.swift in Sources */,
 				86A5035C2ADAD6BA007410E5 /* RequestService.swift in Sources */,
 				86A042BE2AC8476E00597C78 /* NetworkService.swift in Sources */,
 				86D7320A2A7FFEE60030E27E /* CurrentUserService.swift in Sources */,
