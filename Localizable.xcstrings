@@ -360,7 +360,15 @@
       }
     },
     "Would you like to receive notification?" : {
-      "comment" : "-"
+      "comment" : "-",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хотите получать уведомление?"
+          }
+        }
+      }
     },
     "Избранное" : {
       "comment" : "-",

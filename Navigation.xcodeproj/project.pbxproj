@@ -13,6 +13,7 @@
 		861B23662A2B5E180099CA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861B23652A2B5E180099CA6D /* Assets.xcassets */; };
 		861B23692A2B5E180099CA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861B23672A2B5E180099CA6D /* LaunchScreen.storyboard */; };
 		863C03682A4B0F4C006C40EB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863C03672A4B0F4C006C40EB /* LogInViewController.swift */; };
+		864A87BE2B381F2A00AEA070 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A87BD2B381F2A00AEA070 /* LocalAuthorizationService.swift */; };
 		864BA4902A80FBAB00EFAFAA /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864BA48F2A80FBAB00EFAFAA /* TestUserService.swift */; };
 		865720152A3B246F00F6B3F6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865720142A3B246F00F6B3F6 /* InfoViewController.swift */; };
 		865720172A3B252300F6B3F6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865720162A3B252300F6B3F6 /* FeedViewController.swift */; };
@@ -88,6 +89,7 @@
 		861B23682A2B5E180099CA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		861B236A2A2B5E180099CA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863C03672A4B0F4C006C40EB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		864A87BD2B381F2A00AEA070 /* LocalAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthorizationService.swift; sourceTree = "<group>"; };
 		864BA48F2A80FBAB00EFAFAA /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		865720142A3B246F00F6B3F6 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		865720162A3B252300F6B3F6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		8691AA682B36A7450051421D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				864A87BD2B381F2A00AEA070 /* LocalAuthorizationService.swift */,
 				8691AA692B36A78E0051421D /* LocalNotificationsService.swift */,
 				86D6F6AE2AF943BF00435625 /* CoreDataService */,
 				86A042BC2AC8473B00597C78 /* NetworkService */,
@@ -504,6 +507,7 @@
 				86699E482A8D131B00B69719 /* CollectionViewCell.swift in Sources */,
 				864BA4902A80FBAB00EFAFAA /* TestUserService.swift in Sources */,
 				8691AA6A2B36A78E0051421D /* LocalNotificationsService.swift in Sources */,
+				864A87BE2B381F2A00AEA070 /* LocalAuthorizationService.swift in Sources */,
 				86A5035C2ADAD6BA007410E5 /* RequestService.swift in Sources */,
 				86A042BE2AC8476E00597C78 /* NetworkService.swift in Sources */,
 				86D7320A2A7FFEE60030E27E /* CurrentUserService.swift in Sources */,
@@ -732,6 +736,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please give permission";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -760,6 +765,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please give permission";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
